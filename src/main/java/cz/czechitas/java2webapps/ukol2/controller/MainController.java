@@ -26,7 +26,9 @@ public class MainController {
                 "Real programmers count from 0."};
 
         int nahodneCislo = random.nextInt(0, nahodnyCitat.length);
+
         String nahodnyObrazek = "";
+
         switch (nahodneCislo) {
             case 1:
                 nahodnyObrazek = "YQlNLVYckRk";
