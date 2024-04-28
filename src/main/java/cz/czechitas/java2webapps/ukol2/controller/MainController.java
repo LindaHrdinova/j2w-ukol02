@@ -14,7 +14,35 @@ public class MainController {
 
     @GetMapping("/")
     public ModelAndView citaty() {
-        int nahodneCislo = random.nextInt(1, 9);
+        int nahodneCislo = random.nextInt(0, 8);
+        String nahodnyObrazek = "";
+        switch (nahodneCislo) {
+            case 1:
+                nahodnyObrazek = "YQlNLVYckRk";
+                break;
+            case 2:
+                nahodnyObrazek = "LEpfefQf4rU";
+                break;
+            case 3:
+                nahodnyObrazek = "NodtnCsLdTE";
+                break;
+            case 4:
+                nahodnyObrazek = "cWOzOnSoh6Q";
+                break;
+            case 5:
+                nahodnyObrazek = "nPUb9q-Ibko";
+                break;
+            case 6:
+                nahodnyObrazek = "9UUoGaaHtNE";
+                break;
+            case 7:
+                nahodnyObrazek = "IbPxGLgJiMI";
+                break;
+            case 0:
+                nahodnyObrazek = "eMzblc6JmXM";
+                break;
+        }
+
         String[] nahodnyCitat = {
                 "Debugging /de·bugh·ing/ (verb): The Classic Mystery Game where you are the detective, the victim, and the murderer.",
                 "A user interface is like a joke. If you have to explain it, it's not that good.",
@@ -26,6 +54,7 @@ public class MainController {
                 "Real programmers count from 0."};
         ModelAndView result = new ModelAndView("citatyTemplate");
         result.addObject("nahodnyCitat", nahodnyCitat[nahodneCislo]);
+        result.addObject("nahodnyObrazek", nahodnyObrazek);
         return result;
     }
 }
