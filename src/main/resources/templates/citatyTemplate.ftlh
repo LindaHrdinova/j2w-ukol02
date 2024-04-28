@@ -11,7 +11,7 @@
 </head>
 <body style="background-image: url(https://source.unsplash.com/RFHFV7lVQBY/1600x900);">
 <blockquote>
-${1+2}
+    ${nahodnyCitat}
 </blockquote>
 </body>
 </html>
